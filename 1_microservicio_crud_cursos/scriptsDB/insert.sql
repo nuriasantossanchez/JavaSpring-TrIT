@@ -1,0 +1,10 @@
+INSERT INTO cursos.cursos (codCurso, nombre, duracion, precio) VALUES('0000AIDLE', 'Inteligencia artificial y Deep learning', 45, 335.00);
+INSERT INTO cursos.cursos (codCurso, nombre, duracion, precio) VALUES('0000ANG16', 'Desarrollo_de_aplicaciones web con Angular 16', 50, 270.00);
+INSERT INTO cursos.cursos (codCurso, nombre, duracion, precio) VALUES('0000CCODE', 'Clean Code', 30, 200.00);
+INSERT INTO cursos.cursos (codCurso, nombre, duracion, precio) VALUES('0000CLOUD', 'Spring Boot y Spring Cloud: arquitectura de microservicios en la nube', 50, 300.00);
+INSERT INTO cursos.cursos (codCurso, nombre, duracion, precio) VALUES('0000DEEPL', 'Deep Learning', 50, 335.00);
+INSERT INTO cursos.cursos (codCurso, nombre, duracion, precio) VALUES('0000DEVOP', 'Linux para DevOps y Sysadmin', 35, 260.00);
+INSERT INTO cursos.cursos (codCurso, nombre, duracion, precio) VALUES('0000HACKI', 'Hacking Ético', 40, 300.00);
+INSERT INTO cursos.cursos (codCurso, nombre, duracion, precio) VALUES('0000PYTHN', 'Programación Python', 50, 300.00);
+INSERT INTO cursos.cursos (codCurso, nombre, duracion, precio) VALUES('0000PYTLN', 'Procesamiento del Lenguaje Natural con Python', 35, 260.00);
+INSERT INTO cursos.cursos (codCurso, nombre, duracion, precio) VALUES('0000TESAP', 'Testing aplicaciones web', 35, 260.00);
