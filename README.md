@@ -1,4 +1,10 @@
+Spring Boot v3.2.5
 
+Java 17
+
+XAMPP v3.3.0
+
+--------------------------
 ✔ 1_desarrollo_microservicio_crud_cursos.pdf     
 📌 1_microservicio_crud_cursos
 
