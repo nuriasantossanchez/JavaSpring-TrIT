@@ -9,8 +9,9 @@ XAMPP v3.3.0
 📌 1_microservicio_crud_cursos
 
 
- ✔ 2_microservicio_formacion.pdf
- 📌 2_microservicio_formacion
+✔ 2_microservicio_formacion.pdf     
+📌 2_microservicio_formacion
+
 
   3_securizacion_microservicio_curso.pdf
 
