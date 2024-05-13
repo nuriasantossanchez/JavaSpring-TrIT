@@ -75,6 +75,11 @@ public class CursosController {
 	Curso buscarCurso(@PathVariable("codCurso") String codCurso) {
 		return service.buscarCurso(codCurso);
 	}
+	
+	@GetMapping(value = "cursopornombre/{nombre}", produces = MediaType.APPLICATION_JSON_VALUE)
+	Curso buscarCursoPorNombre(@PathVariable("nombre") String nombre) {
+		return service.buscarCursoPorNombre(nombre);
+	}
 
 	/**
 	 * Busca todos los cursos que se encuentren en un rango de precios

@@ -19,4 +19,6 @@ public class Curso {
 	public String nombre;
 	public Integer duracion;
 	public Double precio;
+	
+	
 }

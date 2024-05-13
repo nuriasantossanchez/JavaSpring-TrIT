@@ -51,4 +51,9 @@ public class CursosServiceImp implements CursosService {
 		return dao.findByPrecioBetween(precioMinimo, precioMaximo);
 	}
 
+	@Override
+	public Curso buscarCursoPorNombre(String nombre) {
+		return dao.findByNombre(nombre);
+	}
+
 }
