@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<title>Insert title here</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+</head>
+<body>
+	<div ng-app="comunicacionApp" ng-controller="comunicacionController" class="container">
+	<h1>Cursos</h1>
+			
+		
+		<br/>
+		<div >
+			<table border="1" class="table table-striped table-bordered" ng-init="cargar()">
+				<thead><tr><th>CodCurso</th><th>Nombre</th><th>Duracion</th><th>Asignaturas</th><th>Precio</th></tr></thead>
+				<tbody><tr ng-repeat="r in cursosDto">
+					<td>{{r.codCurso}}</td>
+					<td>{{r.nombre}}</td>
+					<td>{{r.duracion}}</td>
+					<td>{{r.asignaturas}}</td>
+					<td>{{r.precio}}</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<br/>
+		<a href="nuevaformacion.html">Nueva formación</a>
+	</div>
+	
+	<script>
+		var app=angular.module("comunicacionApp",[]);
+		app.controller("comunicacionController",function($scope,$http){
+			$scope.cursosDto=[];	
+			$scope.cargar=function(){
+				let url="http://localhost:9000/sformacion/formacion";	
+				$http.get(url).then(function(res){
+					$scope.cursosDto=res.data;			
+				});
+			}		
+		});
+	
+	</script>
+	
+	
+</body>
+</html>

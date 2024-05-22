@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<title>Insert title here</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+</head>
+<body>
+	<div ng-app="comunicacionApp" ng-controller="comunicacionController" class="container">
+	
+	<h1>Formaciones</h1>
+	<div class="row">
+		
+		<div class="col-sm-6" style="border:solid 1px">
+		<br/>
+		
+		
+		<div class="form-group">
+		<label>Curso</label>
+		<input type="string" min="0" ng-model="curso" class="form-control" style="width:80%"/>
+		</div>
+		
+		<div class="form-group">
+		<label>Asignaturas</label>
+		<input type="number" min="0" ng-model="asignaturas" class="form-control" style="width:80%"/>
+		</div>
+		
+		<div class="form-group">
+		<label>Precio</label>
+		<input type="number" min="0" ng-model="precio" class="form-control" style="width:80%"/>
+		</div>
+		
+		<br/>
+		<br/>
+		</div>
+		<div class="col-sm-6" style="border:solid 1px">
+		<div ng-show="mostrarTabla" >
+			<h3>Datos de la formación</h3>
+			<hr>
+			<h4>Curso: {{curso}}</h4>
+			<h4>Asignaturas: {{asignaturas}}</h4>
+			<h4>Precio: {{precio}}</h4>
+			
+			
+		</div>
+		</div>
+	</div>
+		<br/>
+		
+		 <button ng-click="formacion()" type="button">Confirmar Formación</button>
+		 <br/><br/><br/>
+		 <a href="cursos.html">Ver Cursos</a>
+	
+	</div>
+	<script>
+		var app=angular.module("comunicacionApp",[]);
+		app.controller("comunicacionController",function($scope,$http){
+			$scope.cursosDto=[];
+			$scope.curso;			
+			$scope.asignaturas;	
+			$scope.precio;	
+			
+			$scope.mostrarTabla=true;			
+			
+			$scope.cargarCursos=function(){				
+				let url = "http://localhost:9000/sformacion/formacion";	
+				$http.get(url).then(function(res){
+					$scope.cursosDto=res.data;								
+				});
+			}
+			$scope.formacion=function(){
+				let url="http://localhost:9000/sformacion/formacion";
+				let ob=new Object();
+				ob.curso=$scope.curso;
+				ob.asignaturas=$scope.asignaturas;
+				ob.precio=$scope.precio;
+				$http.post(url,ob);
+			
+			};
+		});
+	
+	</script>
+</body>
+</html>
