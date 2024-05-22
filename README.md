@@ -18,7 +18,13 @@ XAMPP v3.3.0
 
   4_documentacion.pdf
 
-  5_cloud.pdf
+ ✔ 5_cloud.pdf               
+📌 5_1_cloud_eureka_server               
+📌 5_2_cloud_config_server               
+📌 5_3_cloud_gateway_server               
+📌 5_4_cloud_microservicio_secure_cursos_config               
+📌 5_5_cloud_microservicio_formacion_config               
+📌 5_6_cloud_cliente_front                      
 
   6_docker.pdf
 
